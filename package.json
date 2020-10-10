@@ -2,13 +2,13 @@
   "name": "isabelClaraSimo",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npm-run-all clean parcel:dev",
     "build": "npm-run-all clean parcel:build",
-    "parcel:dev": "parcel index.html",
-    "parcel:build": "parcel build index.html",
+    "parcel:dev": "parcel src/index.html",
+    "parcel:build": "parcel build src/index.html",
     "clean": "rimraf dist .cache .cache-loader"
   },
   "keywords": [],
