@@ -1,5 +1,41 @@
 body{
     height: 100vh;
     color: #1f1f1f;
-    background: linear-gradient(to bottom, #bada55, #c0ffee);
+    background: linear-gradient(90deg,rgba(131,189,10,1) 0%, rgba(150,207,1,1) 25%, rgba(241,255,0,1) 100%);
+    
 }
+
+
+.navbar{
+    font-size: 25px;
+    font-family: 'Crimson Text', serif;
+    padding: 10px;
+}
+
+.navbar-brand{
+    font-size: 27px;
+    padding: 10px;
+    font-weight: 600;
+}
+
+#logo{
+    width: 100%;
+}
+
+main{
+    font-family: 'Crimson Text', serif;
+    font-weight: 400;
+    font-size: 3em;
+    margin: 45px 70px;
+}
+
+footer #logoFooter{
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+footer{
+    margin: 35px;
+}
+
