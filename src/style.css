@@ -27,7 +27,7 @@ main{
     font-weight: 400;
     font-size: 28px;
     text-align: justify;
-    margin: 45px 70px;
+    padding: 40px 15px;
 }
 
 footer #logoFooter{
@@ -43,5 +43,11 @@ footer{
 span {
     font-style: italic;
     font-family: serif;
+}
+
+@media (max-width: 480px){
+    section#presentacio {
+        font-size: 20px;
+    }
 }
 
