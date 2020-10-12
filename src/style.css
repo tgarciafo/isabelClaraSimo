@@ -25,7 +25,8 @@ body{
 main{
     font-family: 'Crimson Text', serif;
     font-weight: 400;
-    font-size: 3em;
+    font-size: 28px;
+    text-align: justify;
     margin: 45px 70px;
 }
 
@@ -37,5 +38,10 @@ margin-right: auto;
 
 footer{
     margin: 35px;
+}
+
+span {
+    font-style: italic;
+    font-family: serif;
 }
 
