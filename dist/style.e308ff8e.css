@@ -51,6 +51,9 @@ span {
     }
 }
 
+section#noveles .card-body{
+    font-size: 20px;
+  }
 
 
 /*# sourceMappingURL=/style.e308ff8e.css.map */
