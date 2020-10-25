@@ -7,7 +7,11 @@
         <meta name="keywords"
             content="obres literàries, isabel-clara simó, literatura catalana, literatura, novel·la, narrativa, escriptora, narratica infantil, narrativa juvenil" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://kit.fontawesome.com/a39891b488.js" crossorigin="anonymous"></script>
+        <!--         <script src="https://kit.fontawesome.com/a39891b488.js" crossorigin="anonymous"></script>
+ -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
         <link rel="Shortcut Icon" href="assets/images/icon.ico" type="image/x-icon" />
         <link rel="stylesheet" type="text/css" media="screen" href="style.css">
     </head>
@@ -16,13 +20,14 @@
         <section id="portada">
             <header></header>
             <nav>
-                <input type="checkbox" id="menu">
-                <label for="menu"><i class="fas fa-bars fa-2x"></i></label>
-                <ul>
-                    <li class="active">Home</li>
-                    <li><a href="novela.html">Novel·la</a></li>
-                    <li><a href="">Infantil i juvenil</a></li>
-                </ul>
+                <div class="topnav" id="myTopnav">
+                    <a href="#" class="active">Home</a>
+                    <a href="novela.html">Novel·la</a>
+                    <a href="">Infantil i juvenil</a>
+                    <a id="menu" class="icon">
+                        <i class="fa fa-bars fa-lg"></i>
+                    </a>
+                </div>
             </nav>
             <main>
                 <h1>Isabel-Clara Simó</h1>
@@ -49,6 +54,7 @@
                     semestre del curs 2020-2021</p>
             </footer>
         </section>
+        <script src="index.js"></script>
     </body>
 
 </html>
