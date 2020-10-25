@@ -122,6 +122,10 @@ label {
     main{
         margin: auto 75px;
     }
+    label {
+        width: 60px;
+        height: 60px;
+      }
 }
 @media (min-width: 1200px) {
     #portada > header {
