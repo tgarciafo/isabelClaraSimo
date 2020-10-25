@@ -1,43 +1,49 @@
 body{
-    height: 100vh;
     color: #1f1f1f;
     background: linear-gradient(90deg,rgba(131,189,10,1) 0%, rgba(150,207,1,1) 25%, rgba(241,255,0,1) 100%);
-    
+    margin: 0px;
 }
 
-
-.navbar{
-    font-size: 25px;
-    font-family: 'Crimson Text', serif;
-    padding: 10px;
-}
-
-.navbar-brand{
-    font-size: 27px;
-    padding: 10px;
-    font-weight: 600;
-}
-
-#logo{
+#portada{
+    display: grid;
+    grid-template-columns: 25% auto;
+    grid-template-rows: 350px auto auto 100px;
+    grid-gap: 20px;
+    height: 100vh;
     width: 100%;
+    grid-template-areas: "header header"
+                         "nav nav"
+                         "main main"
+                         "footer footer";
 }
 
-main{
-    font-family: 'Crimson Text', serif;
-    font-weight: 400;
-    font-size: 28px;
-    text-align: justify;
-    padding: 40px 15px;
+#portada > header{
+    grid-area: header;
+    background-position: center;
+    background-size: cover;
+    background-image: url('assets/images/headerM.png');
 }
 
-footer #logoFooter{
-display: block;
+#portada > main{
+    padding: 10px;
+    grid-area: main;
+    padding: 30px 20px;
+}
+
+#portada > nav{
+    padding: 10px;
+    grid-area: nav;
+}
+
+#portada > footer{
+    padding: 10px;
+    grid-area: footer;
+}
+
+footer img{
+    display: block;
 margin-left: auto;
 margin-right: auto;
-}
-
-footer{
-    margin: 35px;
 }
 
 span {
@@ -45,16 +51,90 @@ span {
     font-family: serif;
 }
 
-@media (max-width: 480px){
-    section#presentacio {
-        font-size: 20px;
-    }
+#portada {
+    font-family: 'Crimson Text', serif;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: justify;
 }
 
-section#noveles .card-body{
-    font-size: 20px;
+ul{
+    display: none;
+}
+
+input:checked ~ ul{
+    display: block;
+}
+
+input{
+    display: none;
+}
+
+label {
+    box-sizing: border-box;
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    line-height: 30px;
+    padding: 5px;
+    text-align: center;
   }
 
-  section#noveles h2{
-      padding: 15px;
+ li:active{
+    background: chartreuse;
+    color: #000;
   }
+
+  li.active{
+      background: gray;
+      color: chartreuse;
+  }
+
+  li a{
+      text-decoration: none;
+      color: chartreuse
+  }
+
+  li {
+    display: block;
+    background: black;
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    border-bottom: 1px solid grey;
+    color: chartreuse;
+  }
+  
+  
+
+@media (min-width: 768px) {
+    #portada > header {
+        background-image: url("assets/images/headerPC.png");
+    }
+    #portada {
+        font-family: 'Crimson Text', serif;
+        font-weight: 400;
+        font-size: 22px;
+        text-align: justify;
+    }
+    main{
+        margin: auto 75px;
+    }
+}
+@media (min-width: 1200px) {
+    #portada > header {
+        background-image: url("assets/images/headerPC.png");
+    }
+    #portada {
+        font-family: 'Crimson Text', serif;
+        font-weight: 400;
+        font-size: 26px;
+        text-align: justify;
+    }
+
+    main{
+        margin: auto 200px;
+    }
+}
