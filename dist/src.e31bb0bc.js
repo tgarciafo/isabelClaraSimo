@@ -118,17 +118,19 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"index.js":[function(require,module,exports) {
+/* Hamburguer menu opener */
 window.addEventListener("load", function () {
-  document.querySelector("#menu").addEventListener("click", function (e) {
-    var x = document.getElementById("myTopnav");
+  document.querySelector("#menuIcon").addEventListener("click", function (e) {
+    var x = document.getElementById("menuNav");
 
-    if (x.className === "topnav") {
+    if (x.className === "menu") {
       x.className += " responsive";
     } else {
-      x.className = "topnav";
+      x.className = "menu";
     }
   });
 });
+/* Hamburguer menu opener */
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

@@ -1,10 +1,14 @@
+/* Hamburguer menu opener */
+
 window.addEventListener("load", () => {
-    document.querySelector("#menu").addEventListener("click", e => {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
+    document.querySelector("#menuIcon").addEventListener("click", e => {
+        var x = document.getElementById("menuNav");
+        if (x.className === "menu") {
             x.className += " responsive";
         } else {
-            x.className = "topnav";
+            x.className = "menu";
         }
     });
 });
+
+/* Hamburguer menu opener */
