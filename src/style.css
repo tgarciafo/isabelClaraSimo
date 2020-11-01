@@ -58,6 +58,8 @@ header{
     display: grid;
     grid-gap: 10px;
     padding: 10px;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 .card{
@@ -67,7 +69,7 @@ header{
 }
 
 .card figure{
-    max-height: 220px;
+    max-height: 200px;
   overflow: hidden;
   border-top-left-radius: .5rem;
   border-top-right-radius: .5rem;
@@ -96,22 +98,21 @@ header{
 .card p{
     font-size: 1rem;
   line-height: 1.5;
-  padding: 1rem .75rem;
+  padding: 0 40px;
   color: #666666;
+  font-weight: 600;
 }
 
 .card a{
-    padding: .5rem 1rem;
-  margin: .5rem;
-    background-color: goldenrod;
+    padding: 10px 30px;
+    margin: 10px 40px;
+    background-color: rgba(128, 255, 0, 0.863);
     text-decoration: none;
-    color: white;
+    font-weight: 600;
+    color: black;
     border-radius: .25rem;
     text-align: center;
-    display: inline-block;
-   /*  transition: all .3s; */
-  
-  
+    display: inline-block;  
 }
 .card a:hover {
     opacity: .6;
@@ -200,10 +201,11 @@ span {
 }
 
 @media (min-width: 768px) {
-    #portada > header {
+    #portada > header,  #novel > header  {
         background-image: url("assets/images/headerPC.png");
     }
-    #portada {
+
+    #portada, #novel {
         font-family: 'Crimson Text', serif;
         font-weight: 400;
         font-size: 22px;
@@ -220,10 +222,10 @@ span {
     }
 }
 @media (min-width: 1200px) {
-    #portada > header {
+    #portada > header, #novel > header {
         background-image: url("assets/images/headerPC.png");
     }
-    #portada {
+    #portada, #novel {
         font-family: 'Crimson Text', serif;
         font-weight: 400;
         font-size: 26px;
