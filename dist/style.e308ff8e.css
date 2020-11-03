@@ -4,6 +4,8 @@ body{
     margin: 0px;
 }
 
+/* portada */
+
 #portada{
     display: grid;
     grid-template-columns: auto;
@@ -14,6 +16,27 @@ body{
                          "nav"
                          "main"
                          "footer";
+}
+
+#portada > main{
+    grid-area: main;
+    padding: 10px 20px;
+}
+
+#portada {
+    font-family: 'Crimson Text', serif;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: justify;
+}
+
+
+
+/* novel */
+
+#novel > main{
+    grid-area: main;
+    padding: 10px 20px;
 }
 
 #novel{
@@ -28,18 +51,6 @@ body{
                          "footer";
 }
 
-header{
-    grid-area: header;
-    background-position: center;
-    background-size: cover;
-    background-image: url('/headerM.e9e8fdee.png');
-}
-
-#portada > main{
-    grid-area: main;
-    padding: 10px 20px;
-}
-
 #novel > main{
     grid-area: main;
     display: grid;
@@ -47,10 +58,6 @@ header{
     grid-template-rows: auto auto;
     grid-template-areas:    "description"
                             "cards";
-}
-
-#description{
-    grid-area: description;
 }
 
 #cards{
@@ -118,6 +125,87 @@ header{
     opacity: .6;
   }
 
+/* detall */
+
+#detallJulia{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 350px auto auto 100px;
+    height: 100vh;
+    width: 100%;
+    grid-template-areas: "header"
+                         "nav"
+                         "main"
+                         "footer";
+}
+
+#detallJulia{
+    font-family: 'Crimson Text', serif;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: justify;
+}
+
+#detallJulia > main{
+    grid-area: main;
+    padding: 10px 20px;
+}
+
+#video figure {
+    width: 75%;
+    margin: 30px auto;
+}
+
+#video figcaption {
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+#video .video-fluid {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+
+#video .video-fluid-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+#video .video-fluid::before {
+    display: block;
+    content: "";
+    padding-top: 56.25%;
+}
+
+#detallJulia main{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:    "descriptionDetall"
+                            "video";
+}
+/* comú */
+
+header{
+    grid-area: header;
+    background-position: center;
+    background-size: cover;
+    background-image: url('/headerM.e9e8fdee.png');
+}
+
+#description{
+    grid-area: description;
+}
+
 nav{
     grid-area: nav;
 }
@@ -136,13 +224,6 @@ margin-right: auto;
 span {
     font-style: italic;
     font-family: serif;
-}
-
-#portada {
-    font-family: 'Crimson Text', serif;
-    font-weight: 400;
-    font-size: 18px;
-    text-align: justify;
 }
 
 .menu {
@@ -195,55 +276,12 @@ span {
     text-align: left;
 }
 
-#novel > main{
-    grid-area: main;
-    padding: 10px 20px;
-}
-
-/* detalls */
-
-#descriptionDetall figure {
-    width: 75%;
-    margin: 30px auto;
-}
-
-#descriptionDetall figcaption {
-    text-align: center;
-    font-size: 0.8rem;
-}
-
-#descriptionDetall .video-fluid {
-    position: relative;
-    display: block;
-    width: 100%;
-    padding: 0;
-    overflow: hidden;
-}
-
-#descriptionDetall .video-fluid-item {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-
-#descriptionDetall .video-fluid::before {
-    display: block;
-    content: "";
-    padding-top: 56.25%;
-}
-
-/* detalls */
-
 @media (min-width: 768px) {
-    #portada > header,  #novel > header  {
+    #portada > header,  #novel > header, #detallJulia > header  {
         background-image: url("/headerPC.72c79a4c.png");
     }
 
-    #portada, #novel {
+    #portada, #novel, #detallJulia {
         font-family: 'Crimson Text', serif;
         font-weight: 400;
         font-size: 22px;
@@ -260,10 +298,10 @@ span {
     }
 }
 @media (min-width: 1200px) {
-    #portada > header, #novel > header {
+    #portada > header, #novel > header, #detallJulia > header  {
         background-image: url("/headerPC.72c79a4c.png");
     }
-    #portada, #novel {
+    #portada, #novel, #detallJulia {
         font-family: 'Crimson Text', serif;
         font-weight: 400;
         font-size: 26px;
