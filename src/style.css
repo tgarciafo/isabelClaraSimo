@@ -127,6 +127,11 @@ body{
 
 /* detall */
 
+#video figcaption{
+    font-family: 'Crimson Text', serif;
+    padding: 3px;
+}
+
 #detallJulia{
     display: grid;
     grid-template-columns: auto;
