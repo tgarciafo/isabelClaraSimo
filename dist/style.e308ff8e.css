@@ -132,7 +132,7 @@ body{
     padding: 3px;
 }
 
-#detallJulia, #detallZoe{
+#detallJulia, #detallTzoe{
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 350px auto auto 100px;
@@ -144,14 +144,14 @@ body{
                          "footer";
 }
 
-#detallJulia, #detallZoe{
+#detallJulia, #detallTzoe{
     font-family: 'Crimson Text', serif;
     font-weight: 400;
     font-size: 18px;
     text-align: justify;
 }
 
-#detallJulia > main, #detallZoe > main{
+#detallJulia > main, #detallTzoe > main{
     grid-area: main;
     padding: 10px 20px;
 }
@@ -199,7 +199,7 @@ body{
                             "video";
 }
 
-#detallZoe main{
+#detallTzoe main{
     grid-area: main;
     display: grid;
     grid-template-columns: auto;
@@ -318,11 +318,11 @@ span {
 }
 
 @media (min-width: 768px) {
-    #portada > header,  #novel > header, #detallJulia > header, #detallZoe > header  {
+    #portada > header,  #novel > header, #detallJulia > header, #detallTzoe > header  {
         background-image: url("/headerPC.72c79a4c.png");
     }
 
-    #portada, #novel, #detallJulia, #detallZoe {
+    #portada, #novel, #detallJulia, #detallTzoe {
         font-family: 'Crimson Text', serif;
         font-weight: 400;
         font-size: 22px;
@@ -339,10 +339,10 @@ span {
     }
 }
 @media (min-width: 1200px) {
-    #portada > header, #novel > header, #detallJulia > header, #detallZoe > header  {
+    #portada > header, #novel > header, #detallJulia > header, #detallTzoe > header  {
         background-image: url("/headerPC.72c79a4c.png");
     }
-    #portada, #novel, #detallJulia, #detallZoe {
+    #portada, #novel, #detallJulia, #detallTzoe {
         font-family: 'Crimson Text', serif;
         font-weight: 400;
         font-size: 24px;
