@@ -317,6 +317,31 @@ span {
     text-align: left;
 }
 
+/* slides Infantil i juvenil */
+
+.wrapper {
+    overflow: hidden;
+    
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-gap: 10px;
+}
+
+.slide {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    display: flex;
+}
+
+.slide figure img {
+    scroll-snap-align: start;
+    margin: auto;
+    width: 150px;
+    height: 225px;
+}
+
 @media (min-width: 768px) {
     #portada > header,  #novel > header, #detallJulia > header, #detallTzoe > header  {
         background-image: url("assets/images/headerPC.png");
