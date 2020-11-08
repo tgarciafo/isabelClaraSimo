@@ -118,7 +118,6 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"index.js":[function(require,module,exports) {
-/* Hamburguer menu opener */
 window.addEventListener("load", function () {
   document.querySelector("#menuIcon").addEventListener("click", function (e) {
     var x = document.getElementById("menuNav");
@@ -130,7 +129,6 @@ window.addEventListener("load", function () {
     }
   });
 });
-/* Hamburguer menu opener */
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

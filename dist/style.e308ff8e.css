@@ -317,7 +317,7 @@ span {
     text-align: left;
 }
 
-/* slides Infantil i juvenil */
+/* slides */
 
 .wrapper {
     overflow: hidden;
@@ -334,6 +334,7 @@ span {
         scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     display: flex;
+    height: 350px;
 }
 
 .slide figure img {
@@ -342,6 +343,18 @@ span {
     width: 150px;
     height: 225px;
 }
+
+.slide a {
+text-decoration: none;
+color: black;
+font-weight: 600;
+}
+
+.slide figcaption{
+    padding:20px;
+    text-align: center;
+}
+
 
 @media (min-width: 768px) {
     #portada > header,  #novel > header, #detallJulia > header, #detallTzoe > header  {

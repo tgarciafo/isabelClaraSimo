@@ -1,4 +1,3 @@
-/* Hamburguer menu opener */
 
 window.addEventListener("load", () => {
     document.querySelector("#menuIcon").addEventListener("click", e => {
@@ -11,4 +10,3 @@ window.addEventListener("load", () => {
     });
 });
 
-/* Hamburguer menu opener */
