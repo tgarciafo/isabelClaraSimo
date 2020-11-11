@@ -125,6 +125,17 @@ body{
     opacity: .6;
   }
 
+  #cards i{
+      font-size: 2em;
+      color: wheat;
+  }
+
+  #cards .btnFavorite{
+      background-color: black;
+      border: none;
+      cursor: pointer;
+  }
+
 /* detall */
 
 #video figcaption{

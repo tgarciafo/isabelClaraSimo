@@ -10,3 +10,23 @@ window.addEventListener("load", () => {
     });
 });
 
+/* Favorite */
+
+let favButons = document.getElementsByClassName("btnFavorite");
+
+Array.from(favButons).forEach(favButon => {
+    favButon.addEventListener('click', () => {
+        let icon = favButon.firstChild;
+        if (icon.className == 'far fa-heart') {
+            icon.className = 'fas fa-heart';
+        } else {
+            icon.className = 'far fa-heart';
+        }
+    });
+});
+
+
+
+
+
+
