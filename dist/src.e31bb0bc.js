@@ -118,6 +118,12 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"index.js":[function(require,module,exports) {
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 window.addEventListener("load", function () {
   document.querySelector("#menuIcon").addEventListener("click", function (e) {
     var x = document.getElementById("menuNav");
@@ -129,17 +135,148 @@ window.addEventListener("load", function () {
     }
   });
 });
+window.addEventListener("load", function () {
+  var saved = JSON.parse(localStorage.getItem('favorites'));
+
+  for (var i = 0; i < saved.length; i++) {
+    var divCard = document.getElementById(saved[i]);
+
+    if (divCard != null) {
+      var icon = divCard.getElementsByTagName('i');
+
+      var _iterator = _createForOfIteratorHelper(icon),
+          _step;
+
+      try {
+        for (_iterator.s(); !(_step = _iterator.n()).done;) {
+          element = _step.value;
+          element.className = 'fas fa-heart';
+        }
+      } catch (err) {
+        _iterator.e(err);
+      } finally {
+        _iterator.f();
+      }
+    }
+  }
+
+  var llista = document.getElementById('fav');
+
+  while (llista.hasChildNodes()) {
+    llista.removeChild(llista.firstChild);
+  }
+
+  var _iterator2 = _createForOfIteratorHelper(saved),
+      _step2;
+
+  try {
+    for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+      element = _step2.value;
+      llista.innerHTML += '<li>' + element + '</li>';
+    }
+  } catch (err) {
+    _iterator2.e(err);
+  } finally {
+    _iterator2.f();
+  }
+});
 /* Favorite */
 
 var favButons = document.getElementsByClassName("btnFavorite");
 Array.from(favButons).forEach(function (favButon) {
   favButon.addEventListener('click', function () {
     var icon = favButon.firstChild;
+    var div = favButon.parentNode.id;
 
-    if (icon.className == 'far fa-heart') {
-      icon.className = 'fas fa-heart';
-    } else {
+    if (icon.className == 'fas fa-heart') {
       icon.className = 'far fa-heart';
+      var saved = JSON.parse(localStorage.getItem('favorites'));
+
+      for (var i = 0; i < saved.length; i++) {
+        if (saved[i] === div) {
+          saved.splice(i, 1);
+        }
+      }
+
+      localStorage.setItem('favorites', JSON.stringify(saved));
+      var llistaFav = JSON.parse(localStorage.getItem('favorites'));
+      var llista = document.getElementById('fav');
+
+      while (llista.hasChildNodes()) {
+        llista.removeChild(llista.firstChild);
+      }
+
+      var _iterator3 = _createForOfIteratorHelper(llistaFav),
+          _step3;
+
+      try {
+        for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
+          element = _step3.value;
+          llista.innerHTML += '<li>' + element + '</li>';
+        }
+      } catch (err) {
+        _iterator3.e(err);
+      } finally {
+        _iterator3.f();
+      }
+    } else {
+      icon.className = 'fas fa-heart';
+
+      var _saved = JSON.parse(localStorage.getItem('favorites'));
+
+      if (_saved !== null) {
+        _saved.push(div);
+
+        localStorage.setItem('favorites', JSON.stringify(_saved));
+
+        var _llistaFav = JSON.parse(localStorage.getItem('favorites'));
+
+        var _llista = document.getElementById('fav');
+
+        while (_llista.hasChildNodes()) {
+          _llista.removeChild(_llista.firstChild);
+        }
+
+        var _iterator4 = _createForOfIteratorHelper(_llistaFav),
+            _step4;
+
+        try {
+          for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
+            element = _step4.value;
+            _llista.innerHTML += '<li>' + element + '</li>';
+          }
+        } catch (err) {
+          _iterator4.e(err);
+        } finally {
+          _iterator4.f();
+        }
+      } else {
+        var fav = [];
+        fav.push(div);
+        localStorage.setItem('favorites', JSON.stringify(fav));
+
+        var _llistaFav2 = JSON.parse(localStorage.getItem('favorites'));
+
+        var _llista2 = document.getElementById('fav');
+
+        while (_llista2.hasChildNodes()) {
+          _llista2.removeChild(_llista2.firstChild);
+        }
+
+        var _iterator5 = _createForOfIteratorHelper(_llistaFav2),
+            _step5;
+
+        try {
+          for (_iterator5.s(); !(_step5 = _iterator5.n()).done;) {
+            element = _step5.value;
+            _llista2.innerHTML += '<li>' + element + '</li>';
+          }
+        } catch (err) {
+          _iterator5.e(err);
+        } finally {
+          _iterator5.f();
+        }
+      }
     }
   });
 });
@@ -171,7 +308,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33965" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36781" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
